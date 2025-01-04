@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shared Calendar</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4efe6;
+    }
+
+    header {
+      background-color: #5e6c5b;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    .sidebar {
+  flex: 1;  /* Sidebar on the left */
+  background-color: #f4f4f4;
+  padding: 20px;
+  text-align: center;
+}
+
+
+    .calendar {
+      max-width: 800px;
+      margin: 20px auto;
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .calendar-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .calendar-header button {
+      background-color: #686867;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .calendar-header button:hover {
+      background-color: #686867;
+    }
+
+    .days {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      gap: 10px;
+    }
+
+    .day {
+      padding: 20px;
+      text-align: center;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      background-color: #f9f9f9;
+    }
+
+    .day.today {
+      background-color: #686867;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Shared Calendar</h1>
+  </header>
+  <div class="calendar">
+    <div class="calendar-header">
+      <button onclick="prevMonth()">Previous</button>
+      <h2 id="month-year">January 2025</h2>
+      <button onclick="nextMonth()">Next</button>
+    </div>
+    <div class="days">
+      <div class="day">Sun</div>
+      <div class="day">Mon</div>
+      <div class="day">Tue</div>
+      <div class="day">Wed</div>
+      <div class="day">Thu</div>
+      <div class="day">Fri</div>
+      <div class="day">Sat</div>
+      <!-- Days of the month -->
+      <div class="day">1</div>
+      <div class="day today">2</div>
+      <div class="day">3</div>
+      <div class="day">4</div>
+      <div class="day">5</div>
+      <div class="day">6</div>
+      <div class="day">7</div>
+    
+    
+
+
+      <!-- Repeat as needed -->
+    </div>
+  </div>
+
+   <!-- Sidebar with Time Stamp on the Left -->
+   <div class="sidebar">
+    <h3>Current Time</h3>
+    <div id="time"></div>
+  </div>
+
+  <script>
+    // Placeholder functions for month navigation
+    function prevMonth() {
+      alert('Previous month clicked!');
+    }
+
+    function nextMonth() {
+      alert('Next month clicked!');
+    }
+  </script>
+</body>
+</html>
+
